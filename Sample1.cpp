@@ -16,7 +16,8 @@ class Student{
 
 //		Main Function
 
-int main(){
+int main()
+{
 	Student A;
 	Student B;
 
