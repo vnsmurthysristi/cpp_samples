@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string> // for string class
 
-/* Sample to explain Accessing Public Data Members of Class
+/* Sample program to explain Accessing Public Data Members of Class
 
 */
 
