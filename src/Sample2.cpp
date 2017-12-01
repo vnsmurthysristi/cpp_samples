@@ -2,9 +2,7 @@
 #include <string> // for string class
 
 /* 
-
 Sample program to explain Accessing Private Data Members of class
-
 */
 
 
