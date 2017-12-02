@@ -46,17 +46,17 @@ Types of Constructors
 
 #include<iostream>
 #include<string>
-
+#define pi 3.14159;
 
 // sample Class for Default Constructor
 
-class square{
+class Square{
 	
 	public:
 		int side;
 	
 	public:
-		square(){	//Default Constructor
+		Square(){	//Default Constructor
 			side = 10;
 		}
 
@@ -88,15 +88,47 @@ class Cube{
 */
 
 
+class Area{
+	public:
+		double area;
+		
+		Area(int side){
+			area = side * side;
+		}
+		
+		//Constructor Overloading 
+		Area(int length,int breadth){   
+			area = length * breadth;
+		}
+		
+		Area(double radius);
+		
+};
+
+		//Constructor Overloading 
+		
+		// //Constructor definition using scope resolution operator ::
+		
+		Area::Area(double radius){
+			area = 3.14159 * radius * radius;
+		}
+
+
 
 // Main Function
 
 int main(){
 	
-	square sq1;
+	Square sq1;
 	Cube c1(10),c2(20);
 	
 	std::cout << "\n Default Constructor example \n Side of Square: " << sq1.side;
+	std::cout << "\n\n\n Parametrized Constructor example \n Side of Cube (C1): " << c1.side<<"\n Side of Cube (C2): "<<c2.side;
 	
-	std::cout << "\n\n\n Parametrized Constructor example \n Side of Cube (C1): " << c1.side<<"\n Side of Cube (C2): "<<c2.side;	
+	Area square(10), rectangle(5,4), circle(5.0);
+	
+	std::cout << "\n\n\n Example of Constructor Overloading";
+	std::cout << "\n Area of Square \t:"<<square.area;
+	std::cout << "\n Area of Rectangle \t:"<<rectangle.area;
+	std::cout << "\n Area of Circle \t:"<<circle.area;
 }
