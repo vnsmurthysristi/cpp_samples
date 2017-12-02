@@ -51,6 +51,17 @@ class Geometry{
 		double area(double radius){
 			return 3.14159 * radius * radius;
 		}
+		
+		/*
+		
+		Mul function is defined to explain the concept of default arguements
+		argument will be specified with a value, if no valuae is passed then the default value will be taken
+	
+		*/
+		
+		int mul(int x=3,int y=2){
+			return x*y;
+		}
 };
 
 // Main function
@@ -60,9 +71,19 @@ int main(){
 	Geometry sq, rect, circle;
 	
 	std::cout << "\n Square area is: " << sq.area(4);
+	
 	std::cout << "\n Rectangle area is: " << rect.area(4,3);
+	
 	std::cout << "\n Circle area is: " << circle.area(1.5);
-		 
+	
+	Geometry ml;
+	
+	std::cout << "\n Multiplication is: " << ml.mul();
+	
+	std::cout << "\n Multiplication is: " << ml.mul(5);
+	
+	std::cout << "\n Multiplication is: " << ml.mul(5,4);
+	
 }
 
 
