@@ -60,8 +60,31 @@ class Human{
 		/*
 		Inline functions
 		
+		Inline functions in C++ are similar to macro in C launguage
+		The problem with macro is it will not allows us to having spacing in expression
+		
+		Where as Inline functions allows us to declare a function with full body as macro
+		during the compilation the macro variable/inline functions is replaced with full function code
+		
+		Inline functions are actual functions, which are copied everywhere during compilation, 
+		like preprocessor macro, so the overhead of function calling is reduced. 
+		All the functions defined inside class definition are by default inline, 
+		but you can also make any non-class function inline by using keyword inline with them.
+		
+		// inline function declaration
+		inline void fun(int a) 
+		{ 
+		  return a++; 
+		}
+		
+		Large Inline functions cause Cache misses and affect performance negatively.
 		
 		*/
+		
+		inline void fun(int a) 
+		{ 
+		  std::cout<<"\n"<< ++a;; 
+		}
 		
 		/*
 		Friend functions
@@ -101,4 +124,7 @@ int main(){
 	std::cout<<"\n";
 	Human::printcommon(15);
 	std::cout<<"\n";
+	
+	a.fun(2);
+	b.fun(20);
 }
