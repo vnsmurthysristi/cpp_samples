@@ -56,6 +56,16 @@ class Geometry{
 		
 		Mul function is defined to explain the concept of default arguements
 		argument will be specified with a value, if no valuae is passed then the default value will be taken
+		
+		Rules for using Default Arguments
+		
+		mul (int x,int y);    
+		mul (int x,int y=1);  
+		mul (int x=1,int y);  // This is Incorrect
+		
+		mul (int x,int y=1);
+		mul (int x,int y=1,int z);  // This is incorrect
+		mul (int x,int y=10,int z=10);  // Correct
 	
 		*/
 		
